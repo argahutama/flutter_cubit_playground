@@ -1,7 +1,7 @@
+import 'package:common/extension/string_ext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:playground/common/extension/string_ext.dart';
 import 'package:playground/injection.dart';
 import 'package:playground/presentation/cubit/cat_facts_cubit.dart';
 

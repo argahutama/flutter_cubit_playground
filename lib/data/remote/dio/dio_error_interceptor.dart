@@ -1,8 +1,7 @@
 import 'dart:convert';
 
+import 'package:common/base/network_error.dart';
 import 'package:dio/dio.dart';
-
-import '../../../common/base/network_error.dart';
 
 class DioErrorInterceptor extends Interceptor {
   @override
