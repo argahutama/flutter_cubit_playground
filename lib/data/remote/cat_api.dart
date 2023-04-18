@@ -14,7 +14,8 @@ class CatApi {
       queryParameters: {"page": page},
     );
     final CatFactResponse catFactResponse =
-        response.map((e) => CatFactResponse.fromJson(e));
+        response.map((e) => CatFactResponse.fromJson(e)) ??
+            CatFactResponse.empty();
     return CatFactMapper().map(from: catFactResponse);
   }
 }

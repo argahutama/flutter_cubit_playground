@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
+import 'package:playground/common/extension/string_ext.dart';
 import 'package:playground/injection.dart';
 import 'package:playground/presentation/cubit/cat_facts_cubit.dart';
 
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
             error: (e) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text(e.error.toString()),
+                  content: Text(e.error.toString().shortenDioErrorMessage()),
                 ),
               );
             },

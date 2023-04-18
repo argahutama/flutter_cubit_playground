@@ -27,6 +27,9 @@ class CatFactResponse {
     this.data,
   );
 
+  factory CatFactResponse.empty() =>
+      CatFactResponse(null, null, null, null, null, null);
+
   factory CatFactResponse.fromJson(Map<String, dynamic> json) =>
       _$CatFactResponseFromJson(json);
 
