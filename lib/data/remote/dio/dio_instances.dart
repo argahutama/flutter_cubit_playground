@@ -4,7 +4,7 @@ import 'package:playground/env.dart';
 
 import 'dio_error_interceptor.dart';
 
-@singleton
+@lazySingleton
 class CatFactDio {
   final dio = Dio(
     BaseOptions(
