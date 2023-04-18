@@ -1,12 +1,33 @@
 # Cat Facts
 
-A Flutter app that displays random cat facts using the [Cat Fact API](https://catfact.ninja/#/Facts).
+A Flutter app that displays random cat facts using the [Cat Facts API](https://catfact.ninja/#/Facts).
 
-## Author
 
-- Arga Hutama (argahut@gmail.com)
+## Features
 
-## How to Set Up
+- Display random cat facts
+- Infinite scroll pagination
+- Modularized and Clean Architecture
+
+
+## Dependencies
+
+- [dio](https://pub.dev/packages/dio): A powerful Http client for Dart
+- [build_runner](https://pub.dev/packages/build_runner): A tool for generating files using Dart code
+- [injectable](https://pub.dev/packages/injectable): A lightweight dependency injection library for Dart and Flutter
+- [get_it](https://pub.dev/packages/get_it): A simple Service Locator for Dart and Flutter projects
+- [freezed](https://pub.dev/packages/freezed): A code generator for unions/pattern-matching/copy
+- [infinite_scroll_pagination](https://pub.dev/packages/infinite_scroll_pagination): A Flutter package for infinite scroll pagination
+
+
+## Architecture
+
+- Presentation Layer: The UI components of the app, including widgets for displaying the cat fact and handling user input.
+- Domain Layer: The layer that defines the business logic of the app, including the entities and use cases. It is independent of any specific implementation details.
+- Data Layer: The layer that handles data access, including retrieving and storing data from external sources. It communicates with the domain layer through interfaces, which ensures
+
+
+## Getting Started
 
 1. Install dependencies by running the following command:
 
@@ -40,27 +61,6 @@ flutter run --target lib/main_stg.dart --flavor stg
 flutter run --target lib/main_prod.dart --flavor prod
 ```
 
-## Features
-
-- Displays a random cat fact.
-- Allows the user to refresh the cat fact.
-- Handles errors gracefully if the API is unavailable or returns an error response.
-- Supports multiple flavors for different environments.
-
-## Dependencies
-
-- [http](https://pub.dev/packages/http): A library for making HTTP requests.
-- [get_it](https://pub.dev/packages/get_it): A simple yet powerful dependency injection framework for Dart and Flutter.
-- [flutter_bloc](https://pub.dev/packages/flutter_bloc): A library for implementing the BLoC architecture in Flutter apps.
-
-## Architecture
-
-This app follows the BLoC (Business Logic Component) architecture, which separates the presentation layer from the business logic and data access layers. The app consists of the following components:
-
-- UI components: The user interface of the app, including widgets for displaying the cat fact and handling user input.
-- Bloc components: The business logic of the app, which contains the state and methods for fetching and refreshing the cat fact.
-- Repository components: The data access layer of the app, which handles API requests and responses.
-- Service components: The infrastructure layer of the app, which provides utility methods and abstractions for interacting with external systems.
 
 ## License
 
