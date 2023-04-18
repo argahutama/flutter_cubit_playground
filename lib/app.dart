@@ -1,8 +1,8 @@
+import 'package:common/env.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:playground/env.dart';
-import 'package:playground/presentation/cubit/cat_facts_cubit.dart';
-import 'package:playground/presentation/pages/my_home_page.dart';
+import 'package:home/cubit/cat_facts_cubit.dart';
+import 'package:home/pages/my_home_page.dart';
 
 import 'injection.dart';
 

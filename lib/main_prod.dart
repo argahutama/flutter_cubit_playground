@@ -1,5 +1,6 @@
+import 'package:common/env.dart';
+
 import 'app.dart';
-import 'env.dart';
 
 void main() {
   initApp(Env.prod);
