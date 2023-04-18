@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:playground/env.dart';
+import 'package:playground/presentation/cubit/cat_facts_cubit.dart';
 import 'package:playground/presentation/pages/my_home_page.dart';
 
 import 'injection.dart';
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: "Cat Facts"),
+      home: BlocProvider(
+        create: (context) => CatFactsCubit(),
+        child: const MyHomePage(title: "Cat Facts"),
+      ),
     );
   }
 }

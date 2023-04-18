@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -9,22 +8,22 @@ import 'package:playground/injection.dart';
 part 'cat_facts_cubit.freezed.dart';
 part 'cat_facts_state.dart';
 
-@injectable
+@lazySingleton
 class CatFactsCubit extends Cubit<CatFactsState> {
-  CatFactsCubit() : super(const CatFactsState.initial()) {
-    getCatFacts(1);
-  }
+  var currentPage = 1;
 
-  void getCatFacts(int page) async {
-    emit(const CatFactsState.loading());
+  CatFactsCubit() : super(const CatFactsState.initial());
+
+  void getCatFacts() async {
+    if (currentPage == 1) emit(const CatFactsState.loading());
     try {
       emit(
         CatFactsState.success(
-          await getIt<GetCatFactsUseCase>().invoke(page),
+          await getIt<GetCatFactsUseCase>().invoke(currentPage++),
         ),
       );
     } catch (e) {
-      emit(CatFactsState.error(e as DioError));
+      emit(CatFactsState.error(e as Exception));
     }
   }
 }
