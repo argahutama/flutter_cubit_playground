@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => CatFactsCubit(),
-        child: const MyHomePage(title: "Cat Facts"),
+        child: const MyHomePage(title: 'Cat Facts'),
       ),
     );
   }

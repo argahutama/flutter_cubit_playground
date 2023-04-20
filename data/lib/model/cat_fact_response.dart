@@ -6,17 +6,17 @@ part 'cat_fact_response.g.dart';
 
 @JsonSerializable()
 class CatFactResponse {
-  @JsonKey(name: "current_page")
+  @JsonKey(name: 'current_page')
   int? currentPage;
-  @JsonKey(name: "per_page")
+  @JsonKey(name: 'per_page')
   int? perPage;
-  @JsonKey(name: "total")
+  @JsonKey(name: 'total')
   int? total;
-  @JsonKey(name: "next_page_url")
+  @JsonKey(name: 'next_page_url')
   String? nextPageUrl;
-  @JsonKey(name: "prev_page_url")
+  @JsonKey(name: 'prev_page_url')
   String? prevPageUrl;
-  @JsonKey(name: "data")
+  @JsonKey(name: 'data')
   List<CatFactDto>? data;
 
   CatFactResponse(

@@ -10,7 +10,7 @@ class DioErrorInterceptor extends Interceptor {
       final responseBody =
           NetworkError.fromJson(json.decode(err.response?.data));
       final response = err.response;
-      final errorMessage = responseBody.message ?? "Unknown error";
+      final errorMessage = responseBody.message ?? 'Unknown error';
       response?.data = errorMessage;
       return super.onError(
         DioError(

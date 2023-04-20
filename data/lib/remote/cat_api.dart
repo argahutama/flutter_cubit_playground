@@ -9,8 +9,8 @@ import 'dio/dio_instances.dart';
 class CatApi {
   Future<CatFacts> getCatFacts(int page) async {
     final response = await getIt<CatFactDio>().dio.get(
-      "/facts",
-      queryParameters: {"page": page},
+      '/facts',
+      queryParameters: {'page': page},
     );
     final CatFactResponse catFactResponse =
         response.map((e) => CatFactResponse.fromJson(e)) ??

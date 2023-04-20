@@ -12,20 +12,20 @@ abstract class AppEnv {
     switch (env) {
       case Env.dev:
         {
-          baseUrl = "https://catfact.ninja";
-          title = "Flutter flavors dev";
+          baseUrl = 'https://catfact.ninja';
+          title = 'Flutter flavors dev';
           break;
         }
       case Env.stg:
         {
-          baseUrl = "https://catfact.ninja";
-          title = "Flutter flavors stg";
+          baseUrl = 'https://catfact.ninja';
+          title = 'Flutter flavors stg';
           break;
         }
       case Env.prod:
         {
-          baseUrl = "https://catfact.ninja";
-          title = "Flutter flavors";
+          baseUrl = 'https://catfact.ninja';
+          title = 'Flutter flavors';
           break;
         }
     }

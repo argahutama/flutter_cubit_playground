@@ -9,6 +9,7 @@ linter:
     - unnecessary_brace_in_string_interps
     - avoid_redundant_argument_values
     - leading_newlines_in_multiline_strings
+    - prefer_single_quotes
     # formatting
     - lines_longer_than_80_chars
     - curly_braces_in_flow_control_structures

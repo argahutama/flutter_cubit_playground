@@ -4,9 +4,9 @@ part 'network_error.g.dart';
 
 @JsonSerializable()
 class NetworkError {
-  @JsonKey(name: "code")
+  @JsonKey(name: 'code')
   int? code;
-  @JsonKey(name: "message")
+  @JsonKey(name: 'message')
   String? message;
 
   NetworkError(this.code, this.message);
