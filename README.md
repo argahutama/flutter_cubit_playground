@@ -2,12 +2,17 @@
 
 A Flutter app that displays random cat facts using the [Cat Facts API](https://catfact.ninja/#/Facts).
 
+## Author
+
+- Arga Hutama (argahut@gmail.com)
+
 
 ## Features
 
 - Display random cat facts
 - Infinite scroll pagination
-- Modularized and Clean Architecture
+- Modularized
+- Clean Architecture
 
 
 ## Dependencies
@@ -27,39 +32,24 @@ A Flutter app that displays random cat facts using the [Cat Facts API](https://c
 - Data Layer: The layer that handles data access, including retrieving and storing data from external sources. It communicates with the domain layer through interfaces, which ensures
 
 
-## Getting Started
-
-1. Install dependencies by running the following command:
-
-```
-flutter pub get
-```
-
-2. Generate code for dependency injection by running the following command:
+## How to run
+To run the app in dev mode, execute the following command:
 
 ```
-flutter packages pub run build_runner build --delete-conflicting-outputs
+make all-dev
 ```
 
-3. Run the app by running one of the following commands, depending on the flavor you want to run:
-
-- Dev:
-
+To run the app in staging mode, execute the following command:
 ```
-flutter run --target lib/main_dev.dart --flavor dev
+make all-stg
 ```
 
-- Staging:
+To run the app in production mode, execute the following command:
+```
+make all-prod
+```
 
-```
-flutter run --target lib/main_stg.dart --flavor stg
-```
-
-- Production:
-
-```
-flutter run --target lib/main_prod.dart --flavor prod
-```
+By default, the app runs in debug mode. If you want to run the app in release mode, add FLAGS="--release" after the command.
 
 
 ## License
