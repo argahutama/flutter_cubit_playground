@@ -14,9 +14,9 @@ build-runner:
 
 generate-code:
 	@for module in . common domain data home; do \
-    	$(MAKE) -C $$module dependencies; \
-    	$(MAKE) -C $$module build-runner; \
-    done
+		$(MAKE) -C $$module dependencies; \
+		$(MAKE) -C $$module build-runner; \
+	done
 
 run-dev:
 	flutter run --target lib/main_dev.dart --flavor dev $(FLAGS)
