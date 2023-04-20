@@ -1,5 +1,3 @@
-.PHONY: dependencies build-runner
-
 dependencies:
 	flutter pub get
 

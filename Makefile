@@ -1,5 +1,3 @@
-.PHONY: dependencies build-runner generate-code all-dev all-stg all-prod
-
 all-dev: dependencies generate-code run-dev
 
 all-stg: dependencies generate-code run-stg
