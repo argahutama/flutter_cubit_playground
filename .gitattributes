@@ -1,2 +1,8 @@
+*.java linguist-vendored
 *.cpp linguist-vendored
+*.cc linguist-vendored
+*.sh linguist-vendored
+*.h linguist-vendored
+*.m linguist-vendored
 *.cmake linguist-vendored
+CMakeLists* linguist-vendored
