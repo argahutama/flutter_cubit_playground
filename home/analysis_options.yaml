@@ -1,4 +1,16 @@
 include: package:flutter_lints/flutter.yaml
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+linter:
+  rules:
+    # Style rules
+    - camel_case_types
+    - library_names
+    - avoid_empty_else
+    - unnecessary_brace_in_string_interps
+    - avoid_redundant_argument_values
+    - leading_newlines_in_multiline_strings
+    # formatting
+    - lines_longer_than_80_chars
+    - curly_braces_in_flow_control_structures
+    # doc comments
+    - slash_for_doc_comments

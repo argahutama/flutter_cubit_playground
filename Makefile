@@ -12,6 +12,9 @@ dependencies:
 build-runner:
 	flutter packages pub run build_runner build --delete-conflicting-outputs
 
+analyze:
+	flutter analyze
+
 generate-code:
 	@for module in . common domain data home; do \
 		$(MAKE) -C $$module dependencies; \
@@ -19,10 +22,13 @@ generate-code:
 	done
 
 run-dev:
+	$(MAKE) analyze
 	flutter run --target lib/main_dev.dart --flavor dev $(FLAGS)
 
 run-stg:
+	$(MAKE) analyze
 	flutter run --target lib/main_stg.dart --flavor stg $(FLAGS)
 
 run-prod:
+	$(MAKE) analyze
 	flutter run --target lib/main_prod.dart --flavor prod $(FLAGS)
