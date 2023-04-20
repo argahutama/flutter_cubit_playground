@@ -1,4 +1,4 @@
-import 'package:domain/get_cat_facts_use_case.dart';
+import 'package:domain/usecase/get_cat_facts_use_case.dart';
 import 'package:injectable/injectable.dart';
 
 @module

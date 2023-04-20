@@ -1,10 +1,10 @@
 .PHONY: dependencies build-runner generate-code all-dev all-stg all-prod
 
-all-dev: dependencies generate-code dev
+all-dev: dependencies generate-code run-dev
 
-all-stg: dependencies generate-code stg
+all-stg: dependencies generate-code run-stg
 
-all-prod: dependencies generate-code prod
+all-prod: dependencies generate-code run-prod
 
 dependencies:
 	flutter pub get
