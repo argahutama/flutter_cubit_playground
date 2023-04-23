@@ -14,7 +14,7 @@ analyze:
 	flutter analyze
 
 generate-code:
-	@for module in . common domain data home; do \
+	@for module in . common domain data features/home; do \
 		$(MAKE) -C $$module dependencies; \
 		$(MAKE) -C $$module build-runner; \
 	done
