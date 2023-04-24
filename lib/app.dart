@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: BlocProvider(
-        create: (context) => CatFactsCubit(),
+        create: (context) => getIt<CatFactsCubit>(),
         child: const MyHomePage(title: 'Cat Facts'),
       ),
     );
