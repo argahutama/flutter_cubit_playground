@@ -8,3 +8,4 @@ export 'extension/dio_ext.dart';
 export 'extension/list_ext.dart';
 export 'extension/string_ext.dart';
 export 'injection.dart';
+export 'utils.dart';
