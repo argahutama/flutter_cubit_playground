@@ -26,4 +26,10 @@ class CatFactsCubit extends Cubit<CatFactsState> {
       emit(CatFactsState.error(e as Exception));
     }
   }
+
+  void refreshGetCatFacts() async {
+    currentPage = 1;
+    emit(const CatFactsState.loading());
+    getCatFacts();
+  }
 }
