@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../cubit/cat_facts_cubit.dart';
+import '../widgets/cat_fact_list_item.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -16,8 +17,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final PagingController<int, String> _pagingController =
-      PagingController(firstPageKey: 0);
+  final _pagingController = PagingController<int, String>(firstPageKey: 0);
 
   @override
   void initState() {
@@ -35,32 +35,26 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: BlocConsumer<CatFactsCubit, CatFactsState>(
-        listener: (context, state) {
-          state.maybeMap(
-            error: (e) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(e.error.toString().shortenDioErrorMessage()),
-                ),
-              );
-            },
-            orElse: () {},
-          );
-        },
-        builder: (context, state) {
-          return state.maybeMap(
-            orElse: () {
-              return Center(child: Container());
-            },
-            loading: (e) {
-              return const Center(child: CircularProgressIndicator());
-            },
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: BlocConsumer<CatFactsCubit, CatFactsState>(
+          listener: (context, state) {
+            state.maybeMap(
+              error: (e) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(e.error.toString().shortenDioErrorMessage()),
+                  ),
+                );
+              },
+              orElse: () {},
+            );
+          },
+          builder: (context, state) => state.maybeMap(
+            orElse: () => Center(child: Container()),
+            loading: (e) => const Center(child: CircularProgressIndicator()),
             success: (e) {
               final newItems = e.catFacts.data;
               final isLastPage = e.catFacts.nextPageUrl == null;
@@ -74,29 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
               return PagedListView<int, String>(
                 pagingController: _pagingController,
                 builderDelegate: PagedChildBuilderDelegate<String>(
-                  itemBuilder: (context, item, index) => Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.grey,
-                        ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(8),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: Text(item),
-                      ),
-                    ),
-                  ),
+                  itemBuilder: (context, item, index) => CatFactListItem(item),
                 ),
               );
             },
-          );
-        },
-      ),
-    );
-  }
+          ),
+        ),
+      );
 }
