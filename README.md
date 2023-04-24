@@ -23,6 +23,7 @@ A Flutter app that displays random cat facts using the [Cat Facts API](https://c
 - [get_it](https://pub.dev/packages/get_it): A simple Service Locator for Dart and Flutter projects
 - [freezed](https://pub.dev/packages/freezed): A code generator for unions/pattern-matching/copy
 - [infinite_scroll_pagination](https://pub.dev/packages/infinite_scroll_pagination): A Flutter package for infinite scroll pagination
+- [pull_to_refresh](https://pub.dev/packages/pull_to_refresh): A Flutter package for pull to refresh functionality
 
 
 ## Architecture
