@@ -1,4 +1,6 @@
-import 'package:common/common.dart';
+import 'package:common/base/mapper.dart';
+import 'package:common/extension/list_ext.dart';
+import 'package:common/extension/string_ext.dart';
 import 'package:domain/model/cat_facts.dart';
 
 import '../model/cat_fact_response.dart';

@@ -3,6 +3,6 @@ import 'package:injectable/injectable.dart';
 
 @module
 abstract class HomeModule {
-  @lazySingleton
+  @injectable
   CatFactsCubit get catFactsCubit;
 }

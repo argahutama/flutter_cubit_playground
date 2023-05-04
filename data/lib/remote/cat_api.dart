@@ -1,14 +1,17 @@
 import 'package:common/extension/dio_ext.dart';
-import 'package:common/injection.dart';
-import 'package:data/data.dart';
-import 'package:domain/domain.dart';
+import 'package:dio/dio.dart';
+import 'package:domain/model/cat_facts.dart';
 
 import '../mapper/cat_fact_mapper.dart';
-import 'dio/dio_instances.dart';
+import '../model/cat_fact_response.dart';
 
 class CatApi {
+  final Dio _dio;
+
+  CatApi(this._dio);
+
   Future<CatFacts> getCatFacts(int page) async {
-    final response = await getIt<CatFactDio>().dio.get(
+    final response = await _dio.get(
       '/facts',
       queryParameters: {'page': page},
     );
