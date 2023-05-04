@@ -50,7 +50,7 @@ To run the app in production mode, execute the following command:
 make all-prod
 ```
 
-By default, the app runs in debug mode. If you want to run the app in release mode, add FLAGS="--release" after the command.
+By default, the app runs in debug mode. If you want to run the app in release mode, add `FLAGS="--release"` in the end of the command.
 
 
 ## License
