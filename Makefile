@@ -1,8 +1,8 @@
-all-dev: dependencies generate-code run-dev
+all-dev: generate-code run-dev
 
-all-stg: dependencies generate-code run-stg
+all-stg: generate-code run-stg
 
-all-prod: dependencies generate-code run-prod
+all-prod: generate-code run-prod
 
 dependencies:
 	flutter pub get
