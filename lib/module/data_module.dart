@@ -1,11 +1,10 @@
+import 'package:common/common.dart';
 import 'package:common/env.dart';
 import 'package:data/remote/cat_api.dart';
 import 'package:data/remote/dio/dio_error_interceptor.dart';
 import 'package:data/remote/dio/dio_http_interceptor.dart';
 import 'package:data/repository/cat_repository.dart';
-import 'package:dio/dio.dart';
 import 'package:domain/repository/cat_repository.dart';
-import 'package:injectable/injectable.dart';
 
 @module
 abstract class CatModule {

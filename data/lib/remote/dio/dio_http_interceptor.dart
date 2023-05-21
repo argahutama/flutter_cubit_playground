@@ -1,5 +1,5 @@
-import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:common/common.dart';
+import 'package:flutter/foundation.dart';
 
 class DioHttpInterceptor extends Interceptor {
   @override

@@ -1,5 +1,5 @@
+import 'package:common/common.dart';
 import 'package:common/extension/dio_ext.dart';
-import 'package:dio/dio.dart';
 import 'package:domain/model/cat_facts.dart';
 
 import '../mapper/cat_fact_mapper.dart';

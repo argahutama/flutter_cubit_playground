@@ -11,8 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   json_annotation: ^4.8.0
-  dio: ^5.1.1
-  injectable: ^2.1.1
   get_it: ^7.2.0
   domain:
     path: ../domain
